@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Letter</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Nunito:wght@300;400&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #fdf6ef;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 60px 20px;
+      font-family: 'Nunito', sans-serif;
+      color: #2c2c2c;
+    }
+
+    /* ── Password Gate ── */
+    #gate {
+      max-width: 400px;
+      width: 100%;
+      margin: 80px auto;
+      background: #fffdf9;
+      border: 1px solid #e8ddd0;
+      border-radius: 4px;
+      padding: 48px 40px;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    #gate h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #8a7060;
+      margin-bottom: 8px;
+    }
+
+    #gate p.hint {
+      font-size: 0.85rem;
+      color: #b0998a;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+
+    #gate input {
+      width: 100%;
+      padding: 12px 16px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      border: 1px solid #e8ddd0;
+      border-radius: 3px;
+      background: #fdf6ef;
+      color: #3a3330;
+      outline: none;
+      text-align: center;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      transition: border-color 0.2s;
+    }
+
+    #gate input:focus { border-color: #c8a898; }
+
+    #gate button {
+      width: 100%;
+      padding: 12px;
+      background: #8a7060;
+      color: #fffdf9;
+      border: none;
+      border-radius: 3px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    #gate button:hover { background: #6b5c52; }
+
+    #gate .error {
+      margin-top: 14px;
+      font-size: 0.85rem;
+      color: #c0725a;
+      display: none;
+    }
+
+    /* ── Letter ── */
+    #letter { display: none; }
+
+    article {
+      max-width: 680px;
+      width: 100%;
+      background: #fffdf9;
+      border: 1px solid #e8ddd0;
+      border-radius: 4px;
+      padding: 56px 52px;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+    }
+
+    header h1 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #8a7060;
+      letter-spacing: 0.04em;
+      margin-bottom: 32px;
+      border-bottom: 1px solid #e8ddd0;
+      padding-bottom: 16px;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.85;
+      font-weight: 300;
+      color: #3a3330;
+      margin-bottom: 18px;
+    }
+
+    em {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      color: #6b5c52;
+    }
+
+    strong { font-weight: 500; color: #2c2c2c; }
+
+    footer {
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid #e8ddd0;
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #8a7060;
+      line-height: 1.9;
+    }
+
+    @media (max-width: 600px) {
+      article { padding: 32px 24px; }
+      #gate { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Password Gate -->
+  <div id="gate">
+    <h2>🔒 This letter is private</h2>
+    <p class="hint">Hint: My home's phone number</p>
+    <input type="password" id="pwInput" placeholder="Enter password" />
+    <button onclick="checkPassword()">Open Letter</button>
+    <p class="error" id="errMsg">Wrong password. Try again.</p>
+  </div>
+
+  <!-- Letter -->
+  <div id="letter">
+    <article>
+
+      <header>
+        <h1>Hello</h1>
+      </header>
+
+      <main>
+
+        <p><em>I mean</em> pata nhi, kuch kash hai nhi kehne ko mere pass . Thik hai bhai tumko yahi cahiye n ki sara balme mere p shift ho jaye hum culprit ban jaye itna bolne ke baad v ki mt Krna text y call humko still ....</p>
+
+        <p><em>I mean</em> bhai av to Mera v soch lo , ki humpe ky bit raha hoga jisko ... Aur ab ye sab kr rahi</p>
+
+        <p>Bhai thik hai tumhare doston ke samne tumhara image kharab ho gaya hoga ab isme hum ky kre apke karm he itne ache hai .</p>
+
+        <p>Jitna ho sake bata do mere bare ki kaise hum tumko chor ke a gye the dto mein kaise ignore krte hai aur v</p>
+
+        <p><em>I mean</em> ye sab jante hwe ki hum ek din phele 20km ka treaking kiye hai dhoop pe bina ko acha khana ke ajj v class ke wjh sw direct gym se a gye hai class bhuke itna take hwe hai even injection v mila to usme v bole ki hath pain kr raha hai</p>
+
+        <p>Still tumhare constantly zidi ke wjh se jo tum ki lesliganj mein sabke samne , jo academic building mein ki tumhare sath dto gaye mera sar fat raha hai ye jante hwe backchodi kr rahi hai dress try krke dikha rahi humko, aur bol rahi mu bana ke ky khada hai . Thik bhai uske baad v mall ke stairs ke pass khadi ho gyi n ja rahi n a rahi</p>
+
+        <p>Mere pass kuch tha v nhi aur bhai jo tum lake 100 rs di aur wapas bhag gyi</p>
+
+        <p><strong>Nikita</strong> hum tumko chor ke aiye the, hum to auto mein the wapas ane ke liye usme</p>
+
+        <p>Fir v tumko riverside m , sara mall mein dhundhe itna admi ka phone se phone kiye</p>
+
+        <p>Wo to number yaad tha wrna usme v tum bas kisi se baat kr rahi call v utha rahi to bol rahi hum hostel a gye</p>
+
+        <p>After all sab jante hwe hum kis condition mein hai tum apni zidd pe lagi hwi hai</p>
+
+        <p>Ki man jaw</p>
+
+        <p>Ky man jaye hum , <em>I mean</em> ...... Ky explanation hai tumhare pass us chiz hai ,</p>
+
+        <p>Mere relationship mein ane se phele v tum sexting kr rahi thi priyaj se aur bol rahi hai bf nhi tha bas dost tha</p>
+
+        <p>Ye sab krtu hai dost se tum</p>
+
+        <p>Mere relationship mein ane ke baad v usko bata rahi ki pyar nhi hai bas faltu mein har do din mein ladiyi hote rehta hai</p>
+
+        <p>Manifest kr raha hai tumlog sex ke liye ki college mein kr painge y nhi</p>
+
+        <p>Aur bol rahi ki galti ho gaya , ky ho gaya galti se ky ,</p>
+
+        <p>Bag dete time v aunty ke samne jabarjasti kr rahi uncle sw sune v hum kitna</p>
+
+        <p>Pata hai <strong>Nikita</strong> reality hum batate h</p>
+
+        <p>You just poking me aur cha rahi ki hum kuch react kr de gussa mein fir us baat ka bakehda Krna hai tumko</p>
+
+        <p>Aur kal to yahi huwa mere mana krne ke baad v jabarjasti publicly embarrass krke chale he gye DTO but jo v hum kiye tumhare batoon se poke y trigger hoke nhi kiye</p>
+
+        <p>Genuinely bahut kharab lg raha tha kal</p>
+
+        <p>Thik hai bhai jisko jo batan hai bataw mere bare</p>
+
+        <p>Purva bol rahi ki ab se nhi baat kregi tumse n milne bolegi</p>
+
+        <p><em>I mean</em> bhai thik hai meri galti</p>
+
+        <p>Ab to us point pe kuch bolna v nhi hai humko</p>
+
+        <p><strong>Nikita</strong> kash tum kv realise kro ki ky tum ki ho</p>
+
+        <p>Ek baar tumko realise hi ki hum kis stage mein h av tumko to sab pata tha n mera ghar k ky condition hai Mummy ke bare mera laptop phone sab tuta hai is lowest point pe ake v tum itna kuch ki still bahi</p>
+
+        <p>Bataw jo batana hai mere bare</p>
+
+        <p>Tumko v pata hai <strong>Nikita</strong> agr hum such bolne mein a gye to aur hum dhamki nhi de rahe hum bata rahe hai ki nhi batinge tumhare bare kisi ko lagne do sabko hum galat</p>
+
+        <p>Ab tumhare samne aishe hai to baki kuch v soche bhai</p>
+
+        <p>Thik hai sara galti mera hai tum guilt mt feel kro</p>
+
+        <p>Hum kisi ko tere bare kuch nhi bata rahe <strong>Nikita</strong> .</p>
+
+        <p>Bhai jisko apna bacha jaisa tabiyat kharab hone pe leke ghume apna exam chor ke</p>
+
+        <p>Jo insan khud kv restaurant nhi gaya wo tumhare liye birthday celebrate kr raha</p>
+
+        <p>Ha ab kv bachapan se hum nhi kiye khud ka celebrate to nhi pata humko to n utha acha se wish krne ata hai n kuch acha gift de paye h kv</p>
+
+        <p>But jitna ho raha tha hum kr he rahe the bhai</p>
+
+        <p>Aur ab koi clarification nhi dena hai hume.......... Khud se nafrat hota hai ki jisko itna acha uske bare aishe kyu soch rahe hum av v lagat hai koi sapna chal raha pata nhi kitna baar suffocation mein ulti kiye hai jo insan itna kuch hone pe apna mummy ke samne nhi roya</p>
+
+        <p><strong>Hats off to you</strong></p>
+
+        <p>Sorry, I'm leaving filhal to ghar ja rahe pata nhi ob wapas aayenge Mummy to rehne nhi degi ghar mein</p>
+
+        <p>But bhai dhyanwad ye sab ke liye</p>
+
+        <p>Bol do apne ass pass sabko hum kitne toxic hai</p>
+
+        <p>Sympathy milega to acha lagega</p>
+
+        <p>Aur hum nhi batinge kisi ko n wo chat dikhainge kisi ko</p>
+
+        <p>Ajj ke baad nhi pehchante hai tum</p>
+
+        <p>Nhi rakhnge tera anklet ajj se apna desk p</p>
+
+        <p>You little broke me into pieces</p>
+
+        <p>Ab bas torcher nhi kro</p>
+
+        <p>Bhai kv soche nhi jo insan kv puja nhi krta tha wo tumko yag mein mange aur ab usko chorne ke liye request Krna hoga usse dur Jane ke liye</p>
+
+        <p>Bhai prove kr di tum paristhiti mein insan kuch v kr Sakta h</p>
+
+        <p><strong>Bye !!</strong></p>
+
+        <p>And you know what I did with you.</p>
+
+        <p>I love you more and my last word were</p>
+
+        <p>Kisi aur ke sath mt Krna</p>
+
+        <p>No need to fake jo tum ki wo bahut galat tha</p>
+
+        <p>I hope one day you'll realise</p>
+
+        <p><em>I'll keep you as my favourite incomplete wish !!</em></p>
+
+        <p>I want to say that</p>
+
+        <p>Bibi sachi I really loved you 🙂</p>
+
+        <p>Jesa v kr rahe the hum thik kr lete sab kuch , sachi re</p>
+
+        <p>Bibi <em>I mean</em> 🙂 thik hai bhai jitna burayi Krna hai mere bare kro , mil jayega dost log se tumhara sympathy, humko koi kaisa v judge kre</p>
+
+        <p>Lekin ye sab tum kr rahi ho mere liye <em>I mean</em> 🙂</p>
+
+        <p>🙃🙃🙃</p>
+
+      </main>
+
+      <footer>
+        &mdash; Rounak
+      </footer>
+
+    </article>
+  </div>
+
+  <script>
+    const CORRECT = "8873578690";
+
+    function checkPassword() {
+      const val = document.getElementById('pwInput').value.trim();
+      const err = document.getElementById('errMsg');
+      if (val === CORRECT) {
+        document.getElementById('gate').style.display = 'none';
+        document.getElementById('letter').style.display = 'block';
+      } else {
+        err.style.display = 'block';
+        document.getElementById('pwInput').value = '';
+        document.getElementById('pwInput').focus();
+      }
+    }
+
+    document.getElementById('pwInput').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') checkPassword();
+    });
+  </script>
+
+</body>
+</html>
